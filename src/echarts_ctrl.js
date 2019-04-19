@@ -18,7 +18,7 @@ export class EchartsCtrl extends MetricsPanelCtrl { // eslint-disable-line
       IS_MAP: false,
       map: '',
       USE_URL: false,
-      USE_FAKE_DATA: true,
+      USE_FAKE_DATA: false,
       fakeData: '',
       url: '',
       request: '',
@@ -71,7 +71,7 @@ export class EchartsCtrl extends MetricsPanelCtrl { // eslint-disable-line
   }
 
   onDataReceived(dataList) {
-    this.data = !this.panel.USE_URL && !this.panel.USE_FAKE_DATA ? dataList : this.data;
+    this.data = !this.panel.USE_URL && !this.panel.USE_FAKE_DATA && dataList !== undefined ? dataList : this.data;
 
     this.IS_DATA_CHANGED = true;
     this.render();
