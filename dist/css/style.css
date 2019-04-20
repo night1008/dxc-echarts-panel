@@ -1,3 +1,7 @@
 .echarts_container div.anchorBL {
     display: none;
 }
+
+.gf-code-editor.ace_editor {
+    min-height: 15rem;
+}

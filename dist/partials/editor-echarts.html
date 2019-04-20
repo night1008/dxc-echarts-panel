@@ -16,5 +16,8 @@
             </div>
         </div>
     </div>
-    <textarea class="gf-form-input" ng-model="ctrl.panel.EchartsOption" rows="20" style="width:100%" ng-change="ctrl.onDataReceived()" ng-model-onblur></textarea>
+    <!-- <textarea class="gf-form-input" ng-model="ctrl.panel.EchartsOption" rows="20" style="width:100%" ng-change="ctrl.onDataReceived()" ng-model-onblur></textarea> -->
+    <div class="gf-form gf-form--grow">
+        <code-editor content="ctrl.panel.EchartsOption" on-change="ctrl.onDataReceived()" data-mode="javascript" data-show-gutter data-max-lines="20" data-tab-size="4"></code-editor>
+    </div>
 </div>
